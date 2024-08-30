@@ -175,14 +175,14 @@ public class Gensim {
             request.addHeader("vector-path", modelOrVectorPath + ".kv");
         }
 
-        request.addHeader("file_path", getCanonicalPath(trainingFilePath));
-        request.addHeader("vector_dimension", "" + configuration.getVectorDimension());
+        request.addHeader("file-path", getCanonicalPath(trainingFilePath));
+        request.addHeader("vector-dimension", "" + configuration.getVectorDimension());
         request.addHeader("number-of-threads", "" + configuration.getNumberOfThreads());
         request.addHeader("window-size", "" + configuration.getWindowSize());
         request.addHeader("iterations", "" + configuration.getIterations());
         request.addHeader("negatives", "" + configuration.getNegatives());
         request.addHeader("cbow-or-sg", configuration.getType().toString());
-        request.addHeader("min_count", "" + configuration.getMinCount());
+        request.addHeader("min-count", "" + configuration.getMinCount());
         request.addHeader("sample", "" + configuration.getSample());
         request.addHeader("epochs", "" + configuration.getEpochs());
         request.addHeader("hierarchical-softmax", "" + configuration.isUseHierarchicalSoftmax());

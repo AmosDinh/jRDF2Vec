@@ -186,14 +186,14 @@ def train_word_2_vec() -> str:
         vector_path = request.headers.get(
             "vector-path"
         )  # where the vector file will be stored
-        file_path = request.headers.get("file_path")
-        vector_dimension = request.headers.get("vector_dimension")
+        file_path = request.headers.get("file-path")
+        vector_dimension = request.headers.get("vector-dimension")
         number_of_threads = request.headers.get("number-of-threads")
         window_size = request.headers.get("window-size")
         iterations = request.headers.get("iterations")
         negatives = request.headers.get("negatives")
         cbow_or_sg = request.headers.get("cbow-or-sg")
-        min_count = request.headers.get("min_count")
+        min_count = request.headers.get("min-count")
         sample = request.headers.get("sample")
         epochs = request.headers.get("epochs")
         hs_string: str = request.headers.get("hierarchical-softmax")
