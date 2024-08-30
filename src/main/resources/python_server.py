@@ -58,6 +58,7 @@ def check_requirements() -> str:
         missing_requirements = []
         
         for requirement in requirements:
+            requirement = requirement.split("#")[0].strip()
             req = Requirement(requirement)
             print(f"Checking {req}")
             try:
